@@ -26,7 +26,7 @@ Then open http://localhost:8080 in your browser.
 ## Project Structure
 
 ```
-├── pom.xml                          # Maven build (Quarkus backend)
+├── pom.xml                         # Maven build (Quarkus backend)
 ├── src/main/java/com/example/      # Java REST resources
 │   ├── Greeting.java               # DTO record
 │   └── GreetingResource.java       # JAX-RS endpoint
@@ -35,9 +35,8 @@ Then open http://localhost:8080 in your browser.
 ├── src/main/webui/                 # Angular SPA (Quinoa managed)
 │   ├── angular.json
 │   ├── package.json
-│   ├── proxy.conf.json             # Dev proxy for API calls
 │   └── src/                        # Angular source
-├── src/test/java/com/example/     # Backend tests
+├── src/test/java/com/example/      # Backend tests
 └── .github/
     └── copilot-instructions.md     # AI agent instructions
 ```
@@ -149,19 +148,11 @@ This tells Quinoa to:
 - Enable SPA routing (return `index.html` for unknown routes)
 - Connect to Angular's dev server on port 4200 during `quarkus:dev`
 
-### 4. Angular Proxy Configuration
-
-A `proxy.conf.json` was added so Angular's dev server proxies `/api/*` requests to Quarkus:
-
-```json
-{ "/api": { "target": "http://localhost:8080", "secure": false } }
-```
-
-### 5. REST Resource
+### 4. REST Resource
 
 A simple `GreetingResource` was created at `/api/greeting` using a Java record DTO and Jakarta REST annotations.
 
-### 6. Angular Integration
+### 5. Angular Integration
 
 The Angular `App` component was modified to:
 - Use `HttpClient` to call `GET /api/greeting`

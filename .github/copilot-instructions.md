@@ -22,7 +22,6 @@ This is a full-stack web application combining:
 ├── src/main/webui/                 # Angular SPA (managed by Quinoa)
 │   ├── angular.json
 │   ├── package.json
-│   ├── proxy.conf.json
 │   └── src/                        # Angular source code
 └── src/test/java/com/example/     # Java tests
 ```
