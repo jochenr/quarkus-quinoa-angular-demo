@@ -1,0 +1,11 @@
+<main class="container">
+  <h1>Quarkus + Quinoa + Angular</h1>
+  <section>
+    <h2>Backend Greeting</h2>
+    @if (greeting$ | async; as greeting) {
+      <p class="greeting">{{ greeting.message }}</p>
+    } @else {
+      <p>Loading...</p>
+    }
+  </section>
+</main>

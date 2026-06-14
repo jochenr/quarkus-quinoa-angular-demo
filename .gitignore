@@ -1,0 +1,21 @@
+# Maven
+target/
+
+# IDE
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Quarkus
+.quarkus/
+
+# Node / Angular (handled in webui/.gitignore)
+src/main/webui/node_modules/
+src/main/webui/dist/
+src/main/webui/.angular/
